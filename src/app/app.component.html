@@ -1,8 +1,7 @@
 
 <div class="row">
   <div class="col text-center">
-
-    <img src="assets/img/{{intentos}}.png" class="ahorcado-img">
+    <img src="assets/img/{{intentos}}.png" class="ahorcado-img" alt="imagen">
     <h3>Intentos <small>{{ intentos }} / 9</small></h3>
   </div>
 </div>
@@ -15,11 +14,9 @@
   </div>
 </div>
 
-<div class="row" I*ngf="gano">
+<div class="row" *ngIf="gano">
   <div class="col text-center">
-
     <h1> GANO MMBVO, YA ES TODA UNA PUTAZA </h1>
-
   </div>
 </div>
 
