@@ -1,0 +1,48 @@
+
+<div class="row">
+  <div class="col text-center">
+
+    <img src="assets/img/{{intentos}}.png" class="ahorcado-img">
+    <h3>Intentos <small>{{ intentos }} / 9</small></h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col text-center">
+
+    <h1> {{ palabraOculta }} </h1>
+
+  </div>
+</div>
+
+<div class="row" I*ngf="gano">
+  <div class="col text-center">
+
+    <h1> GANO MMBVO, YA ES TODA UNA PUTAZA </h1>
+
+  </div>
+</div>
+
+<div class="row" *ngIf="perdio">
+  <div class="col text-center">
+
+    <h1> COMO VA A PERDER, SI ES MARICA, GAAAAYYY </h1>
+    <h4> {{palabra}} </h4>
+    <p>por eso nadie lo quiere perra, no ve lo facil que era? uish!!!</p>
+  </div>
+</div>
+
+
+<div class="row" *ngIf="!gano && !perdio">
+  <div class="col text-center">
+
+    <button (click)="comprobar(letra)" *ngFor="let letra of letras" class="btn btn-primary">
+      {{ letra }}
+    </button>
+
+
+  </div>
+</div>
+
+
+
